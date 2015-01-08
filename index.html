@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="60" >
+    <title>Temperature</title>
+    <style>
+        body {
+            background-color: black;
+            color: gray;
+        }
+        .colder {
+            color: blue;
+        }
+        .hotter {
+            color: orange;
+        }
+        .alert {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<h1 class="{{=it.cls}}">{{? it.temp < it.low || it.temp > it.high  }}!!!{{?}}{{=it.temp}}</h1>
+({{= it.lastSync }})
+</body>
+</html>
